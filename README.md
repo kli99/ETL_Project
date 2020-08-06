@@ -1,3 +1,17 @@
+#ETL Project Introduction
+
+Covid19 has been the central topic around the world for quite some time since late February. The numbers are still increasing drastically in many places in the states. We found that New York State Governor Andrew Cuomos was the first official governor to urge citizens to use masks in the public area and provide a path of accessing free masks at different locations across New York state. With the effort of social distancing and the enforcement of masks usage, New York state has reached a flat increase in death cases just a day ago on Aug 4th, 2020 which sets a tremendous precedent on pandemic control when compared to New York state’s early status during mid March. 
+
+Meanwhile, western and southern states have been experiencing a skyrocket in both confirmed cases and deaths numbers over a short span of time. As some of the states are still hesitating to put on a mask enforcement to the citizens in public, we would like to analyze a set of live data released by New York Times to provide some insights of Covid19 statistics vs masks usage.
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # Guidelines for ETL Project
 
 This document contains guidelines, requirements, and suggestions for Project 1.
