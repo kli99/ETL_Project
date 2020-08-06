@@ -6,6 +6,36 @@ FROM county AS c
 INNER JOIN mask AS m ON
 m.countyfp=c.countyfp;
 
+-- Comparing confirmed cases with mask usage 
+SELECT c.countyfp, c.county, c.state, c.confirmed_cases, m.always, m.never
+FROM county AS c
+INNER JOIN mask AS m ON
+m.countyfp=c.countyfp
+ORDER BY c.confirmed_cases DESC; 
+
+-- Comparing confirmed deaths with mask usage 
+SELECT c.countyfp, c.county, c.state, c.confirmed_deaths, m.always, m.never
+FROM county AS c
+INNER JOIN mask AS m ON
+m.countyfp=c.countyfp
+ORDER BY c.confirmed_deaths DESC;
+
+-- Finding which NY county has the most confirmed cases
+SELECT c.countyfp, c.county, c.state, c.confirmed_cases, m.always, m.never
+FROM county AS c
+INNER JOIN mask AS m ON
+m.countyfp=c.countyfp
+WHERE c.state = 'New York'
+ORDER BY c.confirmed_cases DESC;
+
+-- Finding which NY county has the most confirmed deaths
+SELECT c.countyfp, c.county, c.state, c.confirmed_deaths, m.always, m.never
+FROM county AS c
+INNER JOIN mask AS m ON
+m.countyfp=c.countyfp
+WHERE c.state = 'New York'
+ORDER BY c.confirmed_deaths DESC;
+
 -- Finding the state with the most confirmed cases
 SELECT c.state, sum(confirmed_cases) AS confirmed_cases
 FROM county AS c
@@ -92,6 +122,7 @@ INNER JOIN mask AS m ON
 m.countyfp = c.countyfp
 GROUP BY c.state
 ORDER BY never DESC;
+
 
 
 
